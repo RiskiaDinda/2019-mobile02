@@ -30,8 +30,7 @@ public class MainActivity extends AppCompatActivity {
 		Toast.makeText(this, "App on Stop", Toast.LENGTH_SHORT).show();
 	}
 
-
-	// TODO: lengkapi callback untuk onRestart() onResume() onPause() onDestroy()
+    // TODO: lengkapi callback untuk onRestart() onResume() onPause() onDestroy()
 
 	@Override
 	protected void onRestart() {
@@ -44,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
 		super.onResume();
 		Toast.makeText(this, "Application on Resume", Toast.LENGTH_SHORT).show();
 	}
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Toast.makeText(this, "Application on Pause", Toast.LENGTH_SHORT).show();
+    }
 
 	@Override
 	protected void onDestroy() {
